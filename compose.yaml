@@ -1,0 +1,20 @@
+name: learningdeployment
+
+services:
+  task-tracker:
+    build: .
+    container_name: task-tracker-app
+
+    ports:
+      - "8000:8000"
+
+    environment:
+      TASKS_DB_PATH: /data/tasks.db
+
+    volumes:
+      - task-tracker-data:/data
+
+volumes:
+  task-tracker-data:
+    external: true
+    name: task-tracker-data

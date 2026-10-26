@@ -1,0 +1,19 @@
+# Python virtual environment
+.venv/
+venv/
+
+# Python generated files
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# Local database
+tasks.db
+*.db
+
+# Environment variables and secrets
+.env
+.env.*
+
+# Git and editor files
+.vscode/

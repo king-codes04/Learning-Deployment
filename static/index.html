@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f5f7fb">
+    <title>Task Tracker</title>
+    <link rel="stylesheet" href="/static/styles.css">
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="page-header">
+        <p class="eyebrow">A little more focused</p>
+        <h1>Task Tracker</h1>
+        <p class="subtitle">Keep the next thing you need to do in view.</p>
+      </header>
+
+      <section class="task-panel" aria-labelledby="task-heading">
+        <h2 id="task-heading">Your tasks</h2>
+
+        <form id="task-form" class="task-form">
+          <label for="task-title">New task</label>
+          <div class="form-row">
+            <input
+              id="task-title"
+              name="title"
+              type="text"
+              maxlength="200"
+              placeholder="What needs doing?"
+              autocomplete="off"
+              required
+            >
+            <button type="submit">Add task</button>
+          </div>
+        </form>
+
+        <p id="task-feedback" class="feedback" role="status" aria-live="polite"></p>
+
+        <ul id="task-list" class="task-list" aria-label="Tasks" aria-live="polite">
+          <li id="empty-state" class="empty-state">Your list is clear. Add a task to get started.</li>
+        </ul>
+      </section>
+
+      <footer class="page-footer">
+        <p>Small steps count.</p>
+      </footer>
+    </main>
+    <script src="/static/app.js" defer>
+    </script>
+  </body>
+</html>
